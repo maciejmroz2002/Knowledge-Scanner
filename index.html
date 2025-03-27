@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NeuroPrint</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="./images/background.mp4" type="video/mp4">
+    </video>
+    <div class="header">
+        <h1>NeuroPrint</h1>
+        <p>Knoweledge Scanner</p>
+    </div>
+    <div class="main">
+        <form id="testForm">
+            <div class="coolinput">
+                <label for="nameInput" class="text">Name:</label>
+                <input type="text" placeholder="Write your name here..." id="nameInput" class="input">
+            </div>
+
+            <div class="coolinput">
+                <label for="subjectInput" class="text">Subject:</label>
+                <input type="text" placeholder="Subject of the test..." id="subjectInput" class="input">
+            </div>
+            <button type="button" class="button-30" onclick="displayInfo()">Start Test</button>
+        </form>
+        
+        <div id="scanner" class="scanner">
+            <div class="result" id="result"></div>
+            <button id="holdButton" class="hold-button" 
+            onmousedown="startHolding()" 
+            onmouseup="stopHolding()" 
+            onmouseleave="stopHolding()">
+            <img src="./images/finger.png" class="finger">
+            </button>
+            <div class="button-instruction" id="button-instruction"><br><br>Hold this button for 10 seconds to check your knowledge<br><br></div>
+        </div>
+    </div>
+    <script src="./js/script.js"></script>
+</body>
+</html>
