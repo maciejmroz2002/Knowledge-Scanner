@@ -1,6 +1,6 @@
 @font-face {
-    font-family: LexendZetta;
-    src: url(/fonts/LexendZetta-VariableFont_wght.ttf);
+    font-family: 'LexendZetta';
+    src: url('css/LexendZetta-VariableFont_wght.ttf') format('truetype');
   }
 
   
