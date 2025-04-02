@@ -1,6 +1,6 @@
 let holdTime = 0;
 let holdInterval;
-let requiredHoldTime = 10000; // 10 seconds
+let requiredHoldTime = 10000 ; // 10 seconds
 var firstName;
 var subject;
 function displayInfo() {
@@ -25,7 +25,9 @@ function startHolding() {
         holdTime += 100;
         if (holdTime >= requiredHoldTime) {
             clearInterval(holdInterval);
-            document.getElementById("button-instruction").innerHTML = "<p>Knowledge tested succesfully</p><button type='button' class='button-30' onclick='displayScore()'>Check Your Score</button>";
+            document.getElementById("button-instruction").innerHTML = 
+                "<p>Knowledge tested successfully</p>" +
+                "<button type='button' class='button-30' onclick='displayScore()'>Check Your Score</button>";
             holdButton.style.background = "#0bd400";
             holdButton.style.cursor = "default";
             holdButton.disabled = true;
@@ -40,9 +42,17 @@ function stopHolding() {
     holdButton.classList.remove("holding");
 }
 
-function generateScore() {
-
-}
+// Attach both mouse and touch events for cross-device support
+document.addEventListener("DOMContentLoaded", function() {
+    let holdButton = document.getElementById("holdButton");
+    
+    holdButton.addEventListener("mousedown", startHolding);
+    holdButton.addEventListener("mouseup", stopHolding);
+    holdButton.addEventListener("mouseleave", stopHolding);
+    
+    holdButton.addEventListener("touchstart", startHolding);
+    holdButton.addEventListener("touchend", stopHolding);
+});
 
 function getRandomInt (min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -50,7 +60,7 @@ function getRandomInt (min, max) {
 
 function displayScore() {
     document.getElementById("result").innerHTML = 
-        "Name: <strong>" + firstName + "</strong><br>Subject: <strong>" + subject + "</strong><br><br> Score: <strong>" + getRandomInt(51, 100) + "%</strong>";
+        "Name: <strong>" + firstName + "</strong><br>Subject: <strong>" + subject + "</strong><br><br> Score: <strong>" + getRandomInt(80, 100) + "%</strong>";
     document.getElementById("holdButton").style.display = "none"
     document.getElementById("button-instruction").innerHTML = "";
 }

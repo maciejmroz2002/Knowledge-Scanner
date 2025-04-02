@@ -45,7 +45,7 @@
     align-items: center;
     gap: 30px;
     font-weight: 300;
-    font-size: 1.5rem;
+    font-size: 2rem;
   }
 
   /* CSS */
@@ -105,7 +105,7 @@
   }
   
   .coolinput label.text {
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: #7e7e7e;
     font-weight: 600;
     position: relative;
@@ -118,7 +118,7 @@
   
   .coolinput input[type=text].input {
     padding: 11px 10px;
-    font-size: 0.75rem;
+    font-size: 1rem;
     border: 2px #7e7e7e solid;
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.763);
@@ -142,7 +142,7 @@
   }
 
   .button-instruction {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
 
   .hold-button {
@@ -173,5 +173,13 @@
     transform: translateX(-7px) translateY(2px);
 }
 
-
-
+@media (max-width: 768px) {
+  .main {
+    width: 100vw;
+  }
+  .coolinput {
+    max-width: 700px;
+    width: 70vw;
+    
+  }
+}
