@@ -1,11 +1,7 @@
-@font-face {
-    font-family: 'LexendZetta';
-    src: url('css/LexendZetta-VariableFont_wght.ttf') format('truetype');
-  }
-
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Zetta:wght@100..900&display=swap');
   
   body {
-    font-family: LexendZetta;
+    font-family: "Lexend Zetta";
     background-color: #000000;
   }
 
@@ -31,7 +27,7 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(0, 0, 0, 0.925);
+    background-color: rgba(0, 0, 0, 0.612);
     color: white;
     border-radius: 10px;
     text-align: center;
@@ -60,7 +56,7 @@
     color: black;
     cursor: pointer;
     display: inline-flex;
-    font-family:'LexendZetta';
+    font-family: "Lexend Zetta";
     height: 48px;
     justify-content: center;
     line-height: 1;
@@ -105,7 +101,7 @@
   }
   
   .coolinput label.text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: #7e7e7e;
     font-weight: 600;
     position: relative;
@@ -123,6 +119,7 @@
     border-radius: 5px;
     background: rgba(0, 0, 0, 0.763);
     color: white;
+    
   }
   
   .coolinput input[type=text].input:focus {
@@ -182,4 +179,13 @@
     width: 70vw;
     
   }
+}
+
+img {
+  -webkit-touch-callout: none; /* Disables callout menu on long press (iOS) */
+  -webkit-user-select: none;   /* Prevents selection (Safari) */
+  -moz-user-select: none;      /* Prevents selection (Firefox) */
+  -ms-user-select: none;       /* Prevents selection (Internet Explorer/Edge) */
+  user-select: none;           /* Prevents selection (Modern browsers) */
+  pointer-events: none;        /* Prevents interaction with the image */
 }

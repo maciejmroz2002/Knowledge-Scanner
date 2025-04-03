@@ -64,3 +64,21 @@ function displayScore() {
     document.getElementById("holdButton").style.display = "none"
     document.getElementById("button-instruction").innerHTML = "";
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    let holdButton = document.getElementById("holdButton");
+
+    holdButton.addEventListener("mousedown", startHolding);
+    holdButton.addEventListener("mouseup", stopHolding);
+    holdButton.addEventListener("mouseleave", stopHolding);
+    
+    holdButton.addEventListener("touchstart", function(event) {
+        event.preventDefault(); // Prevents the default long-press behavior
+        startHolding();
+    });
+
+    holdButton.addEventListener("touchend", stopHolding);
+    holdButton.addEventListener("contextmenu", function(event) {
+        event.preventDefault(); // Disables the context menu on long press
+    });
+});
